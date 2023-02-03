@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    background-color: rgb(220, 220, 220);
+}
+
+nav {
+    background: none;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    font-family: "Montserrat", sans-serif;
+}
+
+nav > div {
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-portfolio, .nav-onas, .nav-regulamin {
+    font-size: 20px;
+    color: white;
+    position: relative;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+  
+.nav-elements>a:hover {
+    color: white;
+}
+  
+.nav-elements>a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 110%;
+    height: 2px;
+    bottom: -6px;
+    right: -5px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+  
+.nav-elements>a:hover::before {
+    transform: scaleX(1);
+}
+
+.nav-kontakt {
+    width: 200px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    margin-right: 100px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    border: solid 2px white;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.nav-kontakt:hover {
+    color: gray;
+    background-color: white;
+}
+
+.arrow {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    color: #04befe;
+}
+
+.arrow:hover img:first-child, .arrow img{
+    display: none;
+}
+
+.arrow img:first-child, .arrow:hover img {
+    display: flex;
+}
+
+picture {
+    width: 100%;
+}
+
+    /* menu */
+
+    .menu-btn, .close, .wrapper {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .wrapper {
+        z-index: 3;
+        position: absolute;
+        top: 120px;
+        width: 100%;
+        height: 100px;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        background: none;
+        transform: translate(0%, -200%);
+        transition: all 0.6s ease-in-out;
+    }
+
+    .wrapper > a {
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .instagram:hover {
+        color: violet;
+    }
+
+    .youtube:hover {
+        color: red;
+    }
+
+    .discord:hover {
+        color: #3f86ed;
+    }
+
+    #active:checked ~ .wrapper { 
+        transform: translate(0, 0);
+    }
+
+    .menu-text {
+        margin-left: 150px;
+        font-size: 20px;
+        color: white;
+    }
+
+    .menu-btn {
+        position: absolute;
+        z-index: 5;
+        right: 20px;
+        top: 50px;
+        height: 50px;
+        width: 100px;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-btn > span, .menu-btn:before, .menu-btn:after {
+        content: "";
+        position: absolute;
+        top: calc(50% - 1px);
+        left: 30%;
+        width: 40%;
+        border-bottom: 3px solid white;
+        transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    .menu-btn:before {
+        transform: translateY(-8px);
+    }
+
+    .menu-btn:after {
+        transform: translateY(8px);
+    }
+
+    .close {
+        z-index: 5;
+        height: 100%;
+        pointer-events: none;
+        transition: 0.6s;
+    }
+    
+    /* closing animation */
+    #active:checked + .menu-btn span {
+        transform: scaleX(0);
+    }
+
+    #active:checked + .menu-btn:before {
+        transform: rotate(45deg);
+        border-color: #fff;
+    }
+
+    #active:checked + .menu-btn:after {
+        transform: rotate(-45deg);
+        border-color: #fff;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+main {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: url(images/bg-img-full.png);
+}
+
+video {
+    width: 100%;
+    top: 0;
+}
+
+.logo-img {
+    width: 80px;
+    margin-right: 100px;
+}
+
+.box1, .box2, .box3, .box5 {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+
+.box1 {
+    background: url(images/bg-img.png);
+    height: 100vh;
+}
+
+.box1 > p {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+}
+
+.box2 {
+    background: url(images/bg-info.png);
+}
+
+.box3 {
+    gap: 200px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.box4 {
+    height: 80vh;
+    width: 100%;
+    background: url(images/bg-kontakt-image.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.posters {
+    padding-bottom: 200px;
+}
+
+.thumbnails, .banners, .logos, .sygnets, .posters {
+    width: 900px;
+    font-size: 50px;
+    color: rgb(180, 180, 180);
+    font-family: "Montserrat", sans-serif;
+    transition: 0.1s;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 500px;
+    background: none;
+}
+
+.tytul {
+    margin-top: 120px;
+    height: 10px;
+}
+
+.dopisek {
+    font-size: 20px;
+}
+
+.introduce-img, .introduce-img2 {
+    display: flex;
+    align-items: center;
+    flex-basis: 100%;
+    margin-left: -150px;
+}
+
+.introduce-img2 {
+    margin: 0;
+}
+
+.introduce-img > img, .introduce-img2 > img  {
+    width: 700px;
+}
+
+.scroll {
+    display: none;
+}
+
+.banners .scroll img, .thumbnails .scroll img {
+    width: 800px;
+    height: 450px;
+}
+
+.logos .scroll img, .sygnets .scroll img, .posters .scroll img {
+    width: 400px;
+    height: 400px;
+}
+
+.button-show {
+    margin-top: 50px;
+    width: 200px;
+    font-size: 20px;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.button-show:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.button-show:focus {
+    outline: none;
+}
+
+.button-show.color {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 3px 20px 0 rgba(65, 132, 234, 0.1);
+}
+
+.box1 .button-show.color {
+    background-image: linear-gradient(to right, rgba(200, 100, 190, 0.8), rgba(50, 150, 200, 0.8), rgba(190, 90, 180, 0.6), rgba(180, 80, 170, 0.6));
+    box-shadow: 0 3px 20px 0 rgba(65, 132, 234, 0.1);
+}
+
+.invite {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 30px;
+    align-items: center;
+    background: rgb(10,20,28);
+    background: linear-gradient(354deg, rgba(10,12,20,1) 0%, rgba(12,20,35,1) 100%);
+    width: 500px;
+    height: 320px;
+    color: white;
+}
+
+.invite > .nav-kontakt {
+    margin: 0;
+}
+
+.invite > .nav-kontakt.color {
+    background-image: linear-gradient(to right, rgba(60,100,240,1), rgba(40,50,200,1), rgba(60,100,246,1), rgba(40,50,200,1));
+}
+
+.regulamin {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(220, 220, 220);
+    background: url(images/regulamin-bg.png);
+    border-radius: 50px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-left: 120px;
+    padding-right: 120px;
+    margin: 60px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.regulamin > h2 {
+    color: white;
+}
+
+::-webkit-scrollbar{
+    height: 0px;
+    width: 0;
+    background: none;
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover{
+    background: white;
+}
+
+::-webkit-scrollbar:horizontal{
+    background: rgb(0, 0, 0, 0.0);
+    height: 13px;
+}
+
+::-webkit-scrollbar-thumb:horizontal{
+    background: rgb(30, 30, 30);
+    border-radius: 8px;
+}
+
+@media (max-width: 1300px) {
+    .bg-img {
+        height: 100vh;
+    }
+    .box3 {
+        gap: 20px;
+    }
+    .box4 {
+        height: 800px;
+    }
+    .introduce-img {
+        margin-left: -50px;
+    }
+    .introduce-img > img, .introduce-img2 > img {
+        width: 500px;
+    }
+    .regulamin {
+        background: url(images/regulamin-bg-mobile.png);
+    }
+}
+
+@media (max-width: 1280px) {
+    .nav-portfolio, .nav-onas, .nav-regulamin, .nav-kontakt, .menu-text {
+        font-size: 15px;
+    }
+    .nav-kontakt {
+       width: 150px;
+    }
+    .menu-text {
+        margin-left: 0;
+        margin-right: 80px;
+    }
+    .wrapper > a {
+        font-size: 15px;
+    }
+    .wrapper {
+        top: 100px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .logo-img {
+        width: 250px;
+        top: 200px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .logo-img {
+        width: 300px;
+        top: 20px;
+        left: 20px;
+    }
+    nav {
+        height: 1500px;
+        width: 90%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        gap: 100px;
+        left: 5%;
+    }   
+    nav > div {
+        margin-top: 600px;
+        height: 500px;
+        width: 50%;
+        display: flex;
+        flex-flow: column wrap;
+        gap: 30px;
+    }
+    .nav-portfolio, .nav-onas, .nav-regulamin, .nav-kontakt, .menu-text {
+        font-size: 40px;
+    }
+    .nav-kontakt {
+        width: 300px;
+        margin-right: 0;
+    }
+    .menu-text {
+        margin: 40px;
+    }
+    .menu-btn {
+        top: 2.5%;
+        right: 0;
+    }
+    .menu-btn > span, .menu-btn:before, .menu-btn:after {
+        border-bottom: solid 5px white;
+        width: 60%;
+    } 
+    .wrapper {
+        top: 350px;
+        font-size: 40px;
+        height: 200px;
+        width: 100vw;  
+    }
+    .wrapper > a {
+        font-size: 30px;
+    }
+    .box2 {
+        position: absolute;
+        background: none;
+        top: 65%;
+    }
+
+    .info-img {
+        width: 800px;
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pirmais</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="#" sizes="16x16" type="image/png">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <nav id="top">
+            <div class="nav-elements">
+                <img class="logo-img" src="images/nav-logo.png" alt="PIRMAIS">
+                <a class="nav-portfolio" href="#portfolio">PORTFOLIO</a>
+                <a class="nav-onas" href="#onas">O NAS</a>
+                <a class="nav-regulamin" href="#regulamin">REGULAMIN</a>
+            </div>
+            <a class="nav-kontakt color" href="#kontakt">KONTAKT</a>
+            <p class="menu-text">SOCIALE</p>
+            <input type="checkbox" id="active">
+                <label for="active" class="menu-btn"><span></span></label>
+                <label for="active" class="close"></label>
+            <div class="wrapper">
+                    <a class="instagram" href="#">INSTAGRAM</a>
+                    <a class="youtube" href="#">YOUTUBE</a>
+                    <a class="discord" href="#">DISCORD</a>
+            </div>
+            <a href="#top" class="arrow">
+                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/circled-chevron-up.png"/>
+                <img src="https://img.icons8.com/ios/50/FFFFFF/circled-chevron-up.png"/>
+            </a>
+        </nav>
+        
+        <main>
+            <div class="box1">
+                <p>Imposible is nothing</p>
+                <a href="#onas"><input class="button-show color" type="button" name="answer" value="Dalej"/></a>
+            </div>
+            
+            <div class="box2" id="onas">
+                <img class="info-img" src="images/info.png" alt="PIRMAIS">
+            </div>
+
+            <div class="box3">
+                <div class="thumbnails" id="portfolio">
+                    <span class="introduce-img"><img src="images/miniaturki-intro-img.png" alt="miniaturki"></span>
+                    <p class="tytul">MINIATURKI</p>
+                    <p class="dopisek">Świetna miniaturka to świetne<br>
+                        pierwsze wrażenie na odbiorcy</p>
+                    <input class="button-show color" type="button" name="answer" value="Pokaż" onclick="showDiv('scroll')" />
+                </div>
+                <div class="scroll" id="scroll">
+                    <img src="images/thumbnails/thumb1.jpg">
+                    <img src="images/thumbnails/thumb2.jpg">
+                    <img src="images/thumbnails/thumb3.jpg">
+                    <img src="images/thumbnails/thumb4.jpg">
+                    <img src="images/thumbnails/thumb5.jpg">
+                    <img src="images/thumbnails/thumb6.jpg">
+                </div>
+                <div class="banners">
+                    <p class="tytul">BANNERY</p>
+                    <p class="dopisek">Zapewnimy Ci porządny banner,<br>
+                        który podtrzyma profesjonalizm<br>
+                        Twojego kanału</p>
+                    <input class="button-show color" type="button" name="answer" value="Pokaż" onclick="showDiv('scroll2')" />
+                    <span class="introduce-img2"><img src="images/bannery-intro-img.png" alt="miniaturki"></span>
+                </div>
+                <div class="scroll" id="scroll2">
+                    <img src="images/banners/benner1.jpg">
+                    <img src="images/banners/banner2.jpg">
+                    <img src="images/banners/banner3.jpg">
+                    <img src="images/banners/banner4.jpg">
+                </div>
+                <div class="logos">
+                    <span class="introduce-img"><img src="images/loga-intro-img.png" alt="miniaturki"></span>
+                    <p class="tytul">LOGA</p>
+                    <p class="dopisek">Każda firma musi się z czymś<br>
+                        kojarzyć i coś musi ją reprezentować,<br>
+                        po to właśnie jest logo</p>
+                    <input class="button-show color" type="button" name="answer" value="Pokaż" onclick="showDiv('scroll3')" />
+                </div>
+                <div class="scroll" id="scroll3">
+                    <img src="images/logos/logo1.jpg">
+                    <img src="images/logos/logo2.jpg">
+                    <img src="images/logos/logo3.jpg">
+                </div>
+                <div class="sygnets">
+                    <p class="tytul">SYGNETY</p>
+                    <p class="dopisek">Charakterystyczna i unikatowa<br>
+                        forma graficzna, którą możesz<br>
+                        umieścić na przykład na logu firmy</p>
+                    <input class="button-show color" type="button" name="answer" value="Pokaż" onclick="showDiv('scroll4')" />
+                    <span class="introduce-img2"><img src="images/sygnety-intro-img.png" alt="miniaturki"></span>
+                </div>
+                <div class="scroll" id="scroll4">
+                    <img src="images/sygnets/sygnet1.jpg">
+                    <img src="images/sygnets/sygnet2.jpg">
+                </div>
+                <div class="posters">
+                    <span class="introduce-img"><img src="images/plakaty-intro-img.png" alt="miniaturki"></span>
+                    <p class="tytul">PLAKATY</p>
+                    <p class="dopisek">Mogą na nich widnieć różne<br>
+                        treści informacyjne takie jak<br>
+                        na przykład zaproszenie na koncert</p>
+                    <input class="button-show color" type="button" name="answer" value="Pokaż" onclick="showDiv('scroll5')" />
+                </div>
+                <div class="scroll" id="scroll5">
+                    <p>Wkrótce...</p>
+                </div>
+            </div>
+            <div class="box4" id="kontakt">
+                <div class="invite">
+                    <img style="width: 100px;" src="images/logo_png.png" alt="PIRMAIS">
+                    <h2>Dołącz do naszego discorda</h2>
+                    <a class="nav-kontakt color" href="https://discord.com/invite/6TD8D53Ppv" target="_blank">Discord</a>
+                </div>    
+            </div>
+            <div class="box5" id="regulamin">
+                <div class="regulamin">
+                    <h2>REGULAMIN</h2><br>
+                    
+                    1. Przed dokonaniem zamówienia należy skontaktować się z usługodawcą i ustalić szczegóły dotyczące projektu oraz cenę.<br><br>
+
+                    2. Po potwierdzeniu zamówienia i ustaleniu ceny należy dokonać przedpłaty w wysokości co najmniej 25% wartości zamówienia.<br><br>
+
+                    3. Usługodawca zobowiązuje się do dostarczenia projektu w ustalonym terminie, po uprzednim otrzymaniu całej zapłaty.<br><br>
+
+                    4. Klient ma prawo do trzech poprawek w ramach zamówienia. Każda kolejna poprawka będzie obciążona dodatkowymi kosztami.<br><br>
+
+                    5. Usługodawca zastrzega sobie prawo do odmowy realizacji zamówienia w przypadku, gdy treści przekazywane przez klienta są niezgodne z obowiązującym prawem lub naruszają dobra osobiste innych osób.<br><br>
+
+                    6. Wszelkie roszczenia dotyczące niezgodności usługi z zamówieniem należy zgłaszać w ciągu 14 dni od dostarczenia projektu.<br><br>
+
+                    7. Usługodawca zastrzega sobie prawo do publikacji przygotowanego projektu w swoich portfolio oraz do wykorzystywania go w celach promocyjnych.<br><br>
+
+                    8. Niniejszy regulamin jest integralną częścią umowy pomiędzy usługodawcą a klientem.
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            
+        </footer>
+    </body>
+</html>
